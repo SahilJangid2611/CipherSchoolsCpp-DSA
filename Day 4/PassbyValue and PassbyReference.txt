@@ -1,0 +1,25 @@
+#include <iostream>
+using namespace std;
+
+//pass by value
+void incrementValue(int x){
+  x++;
+  cout << "Value of x inside function :- " << x << endl;
+}
+
+
+//pass by reference
+void incrementValuebyReference(int &x){
+  x++;
+  cout << "Value of x inside function by Reference :- " << x << endl;
+}
+
+int main() 
+{
+ int x = 10;
+ incrementValue(x);
+ cout << " Value of x outside function: - " << x << endl;
+ incrementValuebyReference(x);
+ cout << " Value of x outside function by Reference: - " << x << endl;
+
+}

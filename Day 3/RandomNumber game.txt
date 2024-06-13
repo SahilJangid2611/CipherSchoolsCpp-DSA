@@ -1,0 +1,19 @@
+#include <iostream>
+#include <ctime>
+#include <cstdlib>
+using namespace std;
+int main() 
+{
+srand(time(0));
+int randomNum = rand() % 10;
+int userInput;
+cin >> userInput;
+cout << "Actual Number is : " << randomNum << endl;
+cout << "You guessed : " << userInput << endl;
+if(userInput == randomNum){
+  cout << "You won, Number Matched";
+}else {
+   cout << "Try Again";
+}
+    return 0;
+}

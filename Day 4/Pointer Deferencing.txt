@@ -1,0 +1,29 @@
+#include <iostream>
+using namespace std;
+
+int main() 
+{
+ int num = 200;
+ int* ptr = &num;
+ cout << "This is pointer of num -> " << ptr << endl;
+ cout << "Deferencing the num -> "<< *ptr;
+  
+}
+
+-----------------------------------------------------------------
+
+#include <iostream>
+using namespace std;
+
+int main() 
+{
+ int num = 200;
+ int* ptr = &num;
+ cout << "This is address of num initially -> " << ptr << endl;
+ cout << "Deferencing the num initially -> "<< *ptr<< endl;
+ *ptr = 123;
+ cout << "This is address of num finally -> " << ptr << endl;
+  cout << "Deferencing the num finally -> "<< *ptr<< endl;
+ 
+  
+}

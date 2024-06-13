@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+
+int main() 
+{
+  int x = 5;
+ // pre increment
+ int preIncrement = ++x; // x = 6
+ cout << "Pre increment: "<<preIncrement <<"value of x: "<< x <<endl;
+ 
+ x = 5; // reset
+ 
+ //post increment
+ 
+ int postIncrement = x++; // x = 5
+ cout << "Post increment: "<<postIncrement <<"value of x: "<< x <<endl;
+ 
+     return 0;
+}

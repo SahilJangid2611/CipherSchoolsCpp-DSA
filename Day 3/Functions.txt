@@ -1,0 +1,31 @@
+#include <iostream>
+using namespace std;
+
+// returnType functionName(parameter1, paramtere2..){
+    // function body
+    // return statement //returnType;
+  //}
+  bool isEven(int a){
+    return a % 2 == 0;
+  }
+  
+int main() 
+{
+  int a = 6;
+ bool result = isEven(a);
+ cout << boolalpha <<result;
+    return 0;
+}
+
+
+#include <iostream>
+#include <cmath>
+using namespace std;
+int main() 
+{
+double x = 5.25;
+cout<< "Square root of x is : " << sqrt(x) << endl;
+int a = -5;
+cout << "Absolute of a is : " <<abs(a);
+    return 0;
+}
