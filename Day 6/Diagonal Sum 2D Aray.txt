@@ -1,0 +1,23 @@
+#include <iostream>
+using namespace std;
+
+int main() 
+{
+  int arr[3][3] = 
+  {
+    {1,2,3},
+    {4,5,6},
+    {7,8,9}
+  };
+  int size = sizeof(arr)/sizeof(arr[0]);
+    int diagonalSum = 0;
+    int antDiagonalSum = 0;
+    for(int i = 0; i < size; i++) {
+      diagonalSum += arr[i][i]; // sum of diagonal
+      antDiagonalSum += arr[i][size -i-1];
+    }
+    
+    cout << "Sum of Diagonal is : " << diagonalSum << endl;
+    cout << "Sum of Anti Diagonal is : " << antDiagonalSum << endl;
+    
+}

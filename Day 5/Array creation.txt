@@ -1,0 +1,32 @@
+#include <iostream>
+using namespace std;
+
+int main() 
+{
+    int myArray[5]; // declaration of array [0,0,0,0,0] 
+    int a = myArray[0];
+    cout << "This is 1st Element : " << a << endl;
+     cout << "This is 2nd Element : " << myArray[1] << endl;
+     cout << "This is last Element : " << myArray[10] << endl;
+     
+     
+     //Dynamic allocation for array
+     int size = 5;
+     int *myArrayDynamic = new int[size]; // dynamically allocate memory for the array
+     myArrayDynamic[0] = 3;
+     myArrayDynamic[1] = 5;
+     myArrayDynamic[2] = 7;
+     myArrayDynamic[3] = 9;
+     myArrayDynamic[4] = 11;
+     
+     cout << myArrayDynamic[0] << endl;
+     cout << myArrayDynamic[1] << endl;
+     cout << myArrayDynamic[2] << endl;
+     cout << myArrayDynamic[3] << endl;
+     cout << myArrayDynamic[4] << endl;
+     
+     //delete the memory
+     delete[] myArrayDynamic;
+     
+     cout << "Array after deallocation : " << myArrayDynamic[4];
+}
