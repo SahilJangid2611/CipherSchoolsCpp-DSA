@@ -1,0 +1,30 @@
+#include <iostream>
+using namespace std;
+
+class car{ // parent class
+public:
+  void acceleration(){
+    cout << "Car is accelerated"  << endl;
+  };
+};
+
+class ferrari: public car {  // child class
+public:
+  void automaticRoof(){
+    cout << "Roof Automatically opened" << endl;
+  };
+};
+
+class alto : public ferrari {
+  public:
+  void lightson(){
+    cout << "Lights are on";
+  };
+};
+
+int main() 
+{
+   alto obj;
+   obj.acceleration(); 
+    return 0;
+}

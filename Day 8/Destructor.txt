@@ -1,0 +1,58 @@
+#include <iostream>
+using namespace std;
+
+class Product{
+  private:
+  int productId;
+  string productName;
+  double price;
+  int *data;
+  
+  public:
+  Product(){
+    data = new int[10];
+    productId = 0;
+    productName = "";
+    price = 0.0;
+  };
+  
+   Product(int id, string name, double cost){
+    productId = id;
+    productName = name;
+    price = cost;
+  };
+  
+  Product(const Product &objCopy){
+    productId = objCopy.productId;
+    productName = objCopy.productName;
+    price = objCopy.price;
+  };
+  
+  ~Product(){
+    delete[] data;
+    cout << "All objects destroyed" << endl;
+  }
+  void display(){
+    cout << "Product Id : "<< productId << " Product Name : " << productName << " Price : " << price << endl;
+  };
+};
+int main() 
+{
+    Product objDefault;
+    cout << "Default constructor called" << endl;
+    objDefault.display();
+   
+    Product objParameterized(001, "Hp Laptop", 99999.9);
+    cout << "Parameterized constructor called" << endl;
+    objParameterized.display();
+    
+    Product ObjCopy = objParameterized;
+    cout << "Copy constructor called" << endl;
+    ObjCopy.display();
+    
+    
+    
+    // the Object become out of scope // destructor will get called and destroy objects
+    
+    return 0;
+}

@@ -1,0 +1,66 @@
+Implement a class Product that represents a product in an online shopping system. The class should have the following members:
+
+Private Members:
+
+int productId (unique identifier for each product)
+std::string productName
+double price
+Public Members:
+
+Default constructor Product(), which initializes productId to 0, productName to an empty string, and price to 0.0.
+Parameterized constructor Product(int id, const std::string &name, double cost), which initializes productId to id, productName to name, and price to cost.
+Copy constructor Product(const Product &other), which performs a deep copy of other.
+Method void display() const, which displays the details of the product (e.g., "Product ID: 123, Name: Laptop, Price: $999.99").
+
+
+Answer------------
+
+
+#include <iostream>
+using namespace std;
+
+class Product{
+  private:
+  int productId;
+  string productName;
+  double price;
+  
+  public:
+  Product(){
+    productId = 0;
+    productName = "";
+    price = 0.0;
+  };
+  
+   Product(int id, string name, double cost){
+    productId = id;
+    productName = name;
+    price = cost;
+  };
+  
+  Product(const Product &objCopy){
+    productId = objCopy.productId;
+    productName = objCopy.productName;
+    price = objCopy.price;
+  };
+  
+  void display(){
+    cout << "Product Id : "<< productId << " Product Name : " << productName << " Price : " << price << endl;
+  };
+};
+int main() 
+{
+    Product objDefault;
+    cout << "Default constructor called" << endl;
+    objDefault.display();
+   
+    Product objParameterized(001, "Hp Laptop", 99999.9);
+    cout << "Parameterized constructor called" << endl;
+    objParameterized.display();
+    
+    Product ObjCopy = objParameterized;
+    cout << "Copy constructor called" << endl;
+    ObjCopy.display();
+    
+    return 0;
+}

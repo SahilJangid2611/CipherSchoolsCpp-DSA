@@ -1,0 +1,40 @@
+#include <iostream>
+using namespace std;
+
+class MyLPU{
+  private:
+  int* data;
+  string name;
+   int myPrivateVar = 10;
+  
+  
+  public:
+  int var;
+  MyLPU(){ // Default constructor
+    cout << "This is Default constructor;" << endl;
+  }
+  
+  MyLPU(int a, string abc){ // perimterized constructor
+    name = abc;
+    var = a;
+    cout << "My Name is : " << name << endl;
+    cout << "This is constructor with var : " << a;
+  }
+  
+  MyLPU(const MyLPU& objCopy){
+    data = new int(*objCopy.data); // deep copy 
+    cout << "This is data in copy constructor" << *data << endl;
+  }
+  void publicFunction(){
+    cout << "My Private variable : "<< myPrivateVar ; 
+  }
+};
+
+int main() 
+{
+  
+    MyLPU obj2();
+    MyLPU obj(6, "Satyam"); // copy of my class // object creation
+    MyLPU()
+    cout << endl << obj.var;
+}

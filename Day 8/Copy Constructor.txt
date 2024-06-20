@@ -1,0 +1,34 @@
+#include <iostream>
+using namespace std;
+
+class myLPUClass{
+  private:
+  string name;
+  int age;
+  
+  
+  public:
+  //parameter.. const..
+  myLPUClass(string n, int a){
+    name = n;
+    age = a;
+   cout << "Parameterised constructor called" << endl;
+  }
+  
+  //copy constructor
+  myLPUClass(const myLPUClass &objCopy){
+    name = objCopy.name;
+    age = objCopy.age;
+    cout << "Copy constructor called" << endl;
+    cout << "Name in copy constructor : " << name << endl;
+    cout << "Age in copy constructor : " << age << endl;
+  }
+};
+
+int main() 
+{
+    myLPUClass obj1("Raj", 15);
+    myLPUClass objCopy = obj1;
+    cout << "Hello, World!";
+    return 0;
+}
