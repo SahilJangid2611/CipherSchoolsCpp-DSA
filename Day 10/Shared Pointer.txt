@@ -1,0 +1,37 @@
+#include <iostream>
+#include <memory>
+using namespace std;
+
+class MyLpuClass{
+  public:
+  
+  MyLpuClass(){
+    cout << "This is MyLpuClass Constructor" << endl;
+  }
+  
+  ~MyLpuClass(){
+    cout << "This is MyLpuClass Destructor" << endl;
+  }
+  
+  void doSomething(){
+    cout << "This is doing something" << endl;
+  }
+};
+
+int main() 
+{
+   shared_ptr<MyLpuClass> sharedp1 = make_shared<MyLpuClass>(); //pointer
+   
+   shared_ptr<MyLpuClass> sharedp2 = sharedp1; // copy of sharedp1 
+   
+  // shared_ptr<MyLpuClass> sharedp3 = make_shared<MyLpuClass>();
+   
+   sharedp1->doSomething();
+   sharedp2->doSomething();
+  // sharedp3->doSomething();
+   
+  // sharedp1.reset();
+   
+  sharedp2->doSomething();
+  // sharedp3->doSomething();
+}
