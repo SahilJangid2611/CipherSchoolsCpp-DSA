@@ -1,0 +1,45 @@
+#include <iostream>
+#include <vector>
+#include <cmath>
+
+using namespace std;
+
+int jumpSearch(vector<int>& nums, int target){
+  int n = nums.size();
+  int step = sqrt(n);
+  
+  int prev = 0;
+  
+  while(nums[min(step,n) - 1] < target){
+    prev = step;
+    step += sqrt(n);
+    
+    if(prev >= n){
+      return -1;
+    }
+  }
+  
+  while(nums[prev] < target){
+    prev++;
+    if(prev  == min(step, n)){
+      return -1;
+    }
+  }
+  
+  if(nums[prev] == target) {
+    return prev;
+  }
+
+  return -1;
+}
+
+int main() 
+{
+  vector<int> nums = {1, 3, 5, 7, 9, 11, 13, 15};
+  int target = 11;
+  int index = jumpSearch(nums,target);
+  
+  cout << index;
+   
+    return 0;
+}
