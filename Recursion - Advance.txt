@@ -1,0 +1,48 @@
+1- Question: Combination Sum Using Recursion
+Given an array of distinct integers candidates and a target integer target, write a recursive function to find all unique combinations in candidates where the numbers sum to target.
+vector<vector<int>> combinationSum(vector<int>& candidates, int target);
+
+2- Question: N-Queens Problem Using Recursion
+Write a recursive function to solve the N-Queens problem, where you need to place N queens on an N x N chessboard such that no two queens attack each other.
+
+vector<vector<string>> solveNQueens(int n);
+
+3- Question: Word Search Using Recursion
+Given a 2D board of characters and a word, write a recursive function to determine if the word exists in the board. The word can be constructed from letters of sequentially adjacent cells, where "adjacent" cells are horizontally or vertically neighboring.
+
+bool exist(vector<vector<char>>& board, string word);
+
+4- Question: Find Kth Permutation Sequence Using Recursion
+Given an array of characters {'1', '2', ..., 'n'} representing a set of n elements, write a recursive function to find the kth permutation sequence.
+
+string getPermutation(int n, int k);
+
+5- Question: Largest Rectangle in Histogram Using Recursion
+Given an array of integers representing the heights of bars in a histogram, write a recursive function to find the area of the largest rectangle that can be formed.
+
+int largestRectangleArea(vector<int>& heights);
+
+6- Question: Count Distinct Subsequences Using Recursion
+Given a string S, write a recursive function to find the number of distinct subsequences of S.
+
+int countDistinctSubsequences(string S);
+
+7- Question: Sudoku Solver Using Backtracking and Recursion
+Write a recursive function to solve a Sudoku puzzle. The solution should use backtracking to find the correct configuration.
+
+bool solveSudoku(vector<vector<char>>& board);
+
+8- Question: Word Break Problem Using Recursion
+Given a string s and a dictionary of words wordDict, write a recursive function to determine if s can be segmented into a space-separated sequence of one or more dictionary words.
+
+bool wordBreak(string s, vector<string>& wordDict);
+
+9- Question: Partition Equal Subset Sum Using Recursion
+Given an array of positive integers, write a recursive function to determine if it can be partitioned into two subsets such that the sum of elements in both subsets is equal.
+
+bool canPartition(vector<int>& nums);
+
+10- Question: Longest Increasing Subsequence Using Recursion
+Given an integer array, write a recursive function to find the length of the longest increasing subsequence.
+
+int lengthOfLIS(vector<int>& nums);
