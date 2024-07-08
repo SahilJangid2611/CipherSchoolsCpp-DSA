@@ -1,0 +1,36 @@
+1- Question: Find Maximum Element in an Array Using Recursion
+Write a recursive function to find the maximum element in an array of integers.
+int findMax(int arr[], int n);
+
+2- Question: Reverse an Array Using Recursion
+Write a recursive function to reverse an array of integers.
+void reverseArray(int arr[], int start, int end);
+
+3- Question: Check if an Array is Sorted Using Recursion
+Write a recursive function to check if an array of integers is sorted in non-decreasing order.
+bool isSorted(int arr[], int n);
+
+4- Question: Merge Sort Using Recursion
+Implement merge sort algorithm using recursion to sort an array of integers.
+void mergeSort(int arr[], int left, int right);
+
+5- Question: Generate All Subsets of an Array Using Recursion
+
+Write a recursive function to generate all subsets of elements in an array.
+void generateSubsets(int arr[], int index, vector<int>& subset);
+
+6- Question: Check if Array Contains a Subset Sum Using Recursion
+Write a recursive function to check if there exists any subset of elements in the array that adds up to a given sum.
+bool subsetSumExists(int arr[], int n, int sum);
+
+7- Question: Find All Permutations of Array Elements Using Recursion
+Write a recursive function to generate all permutations of elements in an array.
+void generatePermutations(int arr[], int start, int end);
+
+8- Question: Find All Paths in a Maze (Matrix) Using Recursion
+
+Given a matrix representing a maze where 1 represents a path and 0 represents a wall, write a recursive function to find all possible paths from the top-left corner to the bottom-right corner.
+void findPathsInMaze(int maze[][N], int x, int y, int sol[][N]);
+
+9- Question: Find All Connected Components in a Grid Using Recursion
+Given a 2D grid of 0s and 1s where 1 represents a connected cell, write a recursive function to find all distinct connected components in the grid.
