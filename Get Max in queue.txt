@@ -1,0 +1,40 @@
+#include <iostream>
+#include <stack>
+#include <queue>
+#include <stdexcept>
+using namespace std;
+
+class QueueWithMax{
+  private:
+    queue<int> mainQueue;
+    deque<int> maxQueue;
+    
+  public:
+  
+    void enqueue(int value){
+      mainQueue.push(value);
+      while(!maxQueue.empty() && maxQueue.back() < value){
+        maxQueue.pop_back();
+      }
+      maxQueue.pop_back();
+    }
+    
+    
+    void dequeue(){
+      int value = mainQueue.front();
+      mainQueue.pop();
+      
+      if(value == maxQueue.front()){
+        maxQueue.pop_front();
+      }
+    }
+    
+    int getMax(){
+      return maxQueue.front();
+    }
+};  
+
+int main(){
+ 
+  
+}
