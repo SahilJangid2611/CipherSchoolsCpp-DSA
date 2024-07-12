@@ -1,0 +1,56 @@
+#include <iostream>
+#include <stack>
+#include <stdexcept>
+using namespace std;
+
+class QueueUsingStacks{
+  private:
+    stack<int> stack1;
+    stack<int> stack2;
+    
+    void transferStacks(){
+      while(!stack1.empty()){
+        stack2.push(stack1.top());
+        stack1.pop();
+      }
+    }
+    
+  public:
+    void enqueue(int value){
+      stack1.push(value);
+    }
+    
+    void dequeue(){
+      if(stack2.empty()){
+        if(stack1.empty()){
+          underflow_error("queue is empty");
+        }
+        transferStacks();
+      }
+      stack2.pop();
+    }
+    
+    bool isEmpty(){
+      return stack1.empty() && stack2.empty();
+    }
+    
+    int front(){
+      if(stack2.empty()){
+        if(stack1.empty()){
+          underflow_error("queue is empty");
+        }
+        transferStacks();
+      }
+      return stack2.top();
+    }
+};
+
+int main(){
+  QueueUsingStacks s;
+  s.enqueue(5);
+  s.enqueue(12);
+  s.enqueue(51);
+  
+  cout << "front element is : " << s.front();
+  
+}
